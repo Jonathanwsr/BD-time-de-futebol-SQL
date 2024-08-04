@@ -1,0 +1,63 @@
+create database timefutebol;
+USE timefutebol;
+
+
+
+CREATE TABLE jogadores (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(30),
+posição VARCHAR(20),
+altura VARCHAR(20),
+ultimotime VARCHAR(20)
+);
+
+CREATE TABLE comissaotecnica  (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(20),
+funcao VARCHAR(30)
+);
+
+CREATE TABLE fucionarios (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(20),
+funcao VARCHAR(20)
+);
+
+DROP TABLE  fucionarios;     
+
+INSERT INTO jogadores (nome, posição, altura, ultimotime) VALUES ("Lucas Lima" , "zagueiro"   , "1,90"  , "Internacional"),
+                                                                 ("João Silva" ,  "Goleiro"   ,  "1,88m" , " Palmeiras"),
+																 ("Carlos Souza" ,  "Lateral Direito"   ,  "1,78m" , "Corinthians"),
+                                                                  ("Pedro Oliveira" ,  "Zagueiro"   ,  "1,80m" , "Grêmio"),
+																  ("Lucas Lima" ,  "Zagueiro"   ,  "1,95m" , "Internacional"),
+                                                                  ("Felipe Santos" ,  "Volante"   ,  "1,83m" , "São Paulo"),
+                                                                  ("Rafael Mendes" ,  "Lateral Esquerdo"   ,  "1,70m" , "Flamengo"),
+                                                                  ("Daniel Costa" ,  "Meia"   ,  "1,75m" , "Santos"), 
+                                                                  ("Thiago Ferreira" ,  " Meia"   ,  "1,79m" , "Vasco da Gama"),
+                                                                  ("Bruno Almeida" ,  "Atacante"   ,  "1,88m" , "Liverpool"), 
+                                                                  ("Gabriel Martins" , "Meia Atacante" , "1,81m" , "Ajax"),
+                                                                  ("André Lima" ,  "Atacante"   ,  "1,77m" , "Botafogo"); 
+                                                                  
+INSERT INTO comissaotecnica (nome, funcao) VALUES   ("Mourinho", "Técnico"),
+                                                    ("Giuseppe Baresi", "Auxiliar técnico"),
+                                                    ("Carlos Antunes", "Preparador Físico"),
+                                                    ("Felipe Rocha", "Treinador de Goleiros"),
+                                                    ("João Costa", "Analista de Desempenho");
+                                                    
+ 
+INSERT INTO fucionarios (nome, funcao) VALUES   ("Roberto Silva" , "Presidente"),
+												("Mariana Santos" , "Diretora de Futebol"),
+                                                ("Luiz Henrique" , "Gerente de Marketing"),
+												("Ana Paula Lima" , "Médica do Clube"),
+												("Fernando Oliveira" , "Fisioterapeuta"),
+                                                ("Carla Rodrigues" , "Nutricionista");
+                                                
+                                                
+                                                
+
+			
+	SELECT * FROM jogadores;
+    
+    SELECT * FROM comissaotecnica;
+    
+    SELECT * FROM fucionarios;
